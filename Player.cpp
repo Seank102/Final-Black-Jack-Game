@@ -31,7 +31,7 @@ bool playerTurn(Deck& deck, vector<Card>& playerHand, bool& playerDoubledDown)
             cout << fixed << setprecision(2);
             cout << "Probability of Busting if you hit: " << bustProb * 100 << "%\n";
             cout << "Probability of hitting 21 if you hit: " << to21Prob * 100 << "%\n";
-            cout << "Probability of staying under 21: " << notBustingProb * 100 << "%\n";
+            cout << "Probability of not busting: " << notBustingProb * 100 << "%\n";
 
             char doubleChoice;
             while (true) 
@@ -71,7 +71,7 @@ bool playerTurn(Deck& deck, vector<Card>& playerHand, bool& playerDoubledDown)
         calculatePlayerProbabilities(playerHand, deck, bustProb, to21Prob, notBustingProb);
         cout << "Probability of Busting if you hit: " << bustProb * 100 << "%\n";
         cout << "Probability of hitting 21 if you hit: " << to21Prob * 100 << "%\n";
-        cout << "Probability of staying under 21: " << notBustingProb * 100 << "%\n";
+        cout << "Probability of not busting: " << notBustingProb * 100 << "%\n";
 
         char choice;
         while (true) 
