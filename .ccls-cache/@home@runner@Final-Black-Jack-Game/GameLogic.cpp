@@ -213,17 +213,17 @@ void calculatePlayerProbabilities(const std::vector<Card>& playerHand, const Dec
     for (const auto& card : deck.getRemainingCards()) 
     {
         // Simulate adding this card to the player's hand
-        std::vector<Card> simulatedHand = playerHand;
-        simulatedHand.push_back(card);
+        std::vector<Card> testHand = playerHand;
+        testHand.push_back(card);
 
         // Recalculate hand value dynamically
-        int simulatedTotal = calculateHandValue(simulatedHand);
+        int testTotal = calculateHandValue(testHand);
 
-        if (simulatedTotal > 21) 
+        if (testTotal > 21) 
         {
             cardsToBust++;
         } 
-        else if (simulatedTotal == 21) 
+        else if (testTotal == 21) 
         {
             cardsTo21++;
         }
